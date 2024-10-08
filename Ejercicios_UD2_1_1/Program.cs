@@ -24,7 +24,16 @@
                 return;
             }
 
-            Console.WriteLine($"Una persona nacida en {anoNacimiento} tendrá en {anoActual} {(anoActual - anoNacimiento)} años");            
+            int edad = CalcularEdad(anoNacimiento, anoActual);
+
+            Console.WriteLine($"Una persona nacida en {anoNacimiento} tendrá en {anoActual} {edad} años");            
+        }
+
+        static int CalcularEdad(int miAnoNacimiento, int miAnoActual) 
+        {
+            int edad = miAnoActual - miAnoNacimiento;
+
+            return edad;
         }
     }
 }
